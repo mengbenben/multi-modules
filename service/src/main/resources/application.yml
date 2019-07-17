@@ -1,0 +1,18 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: root
+    password: root
+    in-memory: true
+  jms:
+    pub-sub-domain: true
+  kafka:     # 指定kafka 代理地址，可以多个
+    bootstrap-servers: http://kafkahost:9092
+    consumer:   # 指定默认消费者group id
+      group-id: myGroup
+    template:    # 指定默认topic id
+      default-topic: tsc_dsc_newMsg
+    listener:   # 指定listener 容器中的线程数，用于提高并发量
+      concurrency: 5
+    producer:  # 每次批量发送消息的数量
+      batch-size: 1000

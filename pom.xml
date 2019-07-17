@@ -11,6 +11,8 @@
         <module>entity</module>
         <module>web</module>
         <module>repository</module>
+        <module>customize</module>
+        <module>common</module>
     </modules>
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
@@ -49,6 +51,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

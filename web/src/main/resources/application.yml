@@ -2,6 +2,8 @@ server:
   port: 8086
 
 spring:
+  aop:
+    auto: true #启动aop配置
   datasource:
     name: mysql_test
     type: com.alibaba.druid.pool.DruidDataSource

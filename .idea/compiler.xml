@@ -7,12 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="web" />
-        <module name="repository" />
-        <module name="service" />
         <module name="entity" />
+        <module name="common" />
+        <module name="customize" />
+        <module name="service" />
+        <module name="repository" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="common" target="1.8" />
+      <module name="customize" target="1.8" />
       <module name="dao" target="1.8" />
       <module name="entity" target="1.8" />
       <module name="model" target="1.8" />
@@ -24,6 +28,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="customize" options="-parameters" />
       <module name="dao" options="-parameters" />
       <module name="entity" options="-parameters" />
       <module name="model" options="-parameters" />
